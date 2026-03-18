@@ -142,6 +142,13 @@ code {
     font-size: 1.1rem;
 }
 
+.logo-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
 .logo-highlight {
     background: var(--gradient-primary);
     -webkit-background-clip: text;
