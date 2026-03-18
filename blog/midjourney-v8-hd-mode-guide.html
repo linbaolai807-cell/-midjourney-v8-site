@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -21,7 +21,7 @@
 <body>
     <nav class="navbar scrolled" id="navbar">
         <div class="container nav-container">
-            <a href="../index.html" class="nav-logo"><span class="logo-icon">◆</span><span class="logo-text">MJ<span class="logo-highlight">V8</span></span></a>
+            <a href="../index.html" class="nav-logo"><img src="../images/logo.png" alt="MJV8" class="logo-img"><span class="logo-text">MJ<span class="logo-highlight">V8</span></span></a>
             <div class="nav-links" id="nav-links">
                 <a href="../index.html#features" class="nav-link">Features</a>
                 <a href="../index.html#prompt-generator" class="nav-link">Prompt Generator</a>
@@ -36,7 +36,7 @@
 
     <header class="article-header">
         <div class="container">
-            <span class="article-tag">🖼️ Deep Dive</span>
+            <span class="article-tag">🖼�?Deep Dive</span>
             <h1>V8 HD Mode: Creating Native 2K Images (2048×2048)</h1>
             <div class="article-meta">
                 <span>📖 8 min read</span>
@@ -51,10 +51,10 @@
         <h2>What is HD Mode?</h2>
         <p>HD mode is a new parameter introduced in V8 that tells the model to render at its maximum native resolution of 2048×2048 pixels. This means:</p>
         <ul>
-            <li><strong>No upscaling artifacts</strong> — every detail is generated natively</li>
-            <li><strong>Sharper textures</strong> — fabric, skin, architecture all have incredible detail</li>
-            <li><strong>Better small details</strong> — text, eyes, hands, and intricate patterns are rendered more accurately</li>
-            <li><strong>Print-ready quality</strong> — output is suitable for printing at reasonable sizes</li>
+            <li><strong>No upscaling artifacts</strong> �?every detail is generated natively</li>
+            <li><strong>Sharper textures</strong> �?fabric, skin, architecture all have incredible detail</li>
+            <li><strong>Better small details</strong> �?text, eyes, hands, and intricate patterns are rendered more accurately</li>
+            <li><strong>Print-ready quality</strong> �?output is suitable for printing at reasonable sizes</li>
         </ul>
 
         <h2>How to Use HD Mode</h2>
@@ -67,18 +67,18 @@
         <h2>When to Use HD Mode</h2>
         <h3>Best Use Cases for --hd</h3>
         <ul>
-            <li><strong>Detailed portraits</strong> — skin texture, hair strands, eye detail</li>
-            <li><strong>Architecture and interiors</strong> — intricate building details, material textures</li>
-            <li><strong>Nature and macro</strong> — individual leaves, water droplets, insect wings</li>
-            <li><strong>Product visualization</strong> — sharp product renders for commercial use</li>
-            <li><strong>Print projects</strong> — posters, art prints, book covers</li>
+            <li><strong>Detailed portraits</strong> �?skin texture, hair strands, eye detail</li>
+            <li><strong>Architecture and interiors</strong> �?intricate building details, material textures</li>
+            <li><strong>Nature and macro</strong> �?individual leaves, water droplets, insect wings</li>
+            <li><strong>Product visualization</strong> �?sharp product renders for commercial use</li>
+            <li><strong>Print projects</strong> �?posters, art prints, book covers</li>
         </ul>
 
         <h3>When to Skip --hd</h3>
         <ul>
-            <li><strong>Quick exploration</strong> — when you're still iterating on prompt ideas</li>
-            <li><strong>Social media posts</strong> — standard resolution is plenty for Instagram/Twitter</li>
-            <li><strong>Batch generation</strong> — to conserve GPU hours during bulk creation</li>
+            <li><strong>Quick exploration</strong> �?when you're still iterating on prompt ideas</li>
+            <li><strong>Social media posts</strong> �?standard resolution is plenty for Instagram/Twitter</li>
+            <li><strong>Batch generation</strong> �?to conserve GPU hours during bulk creation</li>
         </ul>
 
         <div class="tip-box">
@@ -105,12 +105,12 @@
         <p>Since HD mode provides more resolution to work with, your prompts should take advantage of it:</p>
 
         <h3>1. Add Detail-Oriented Descriptors</h3>
-        <pre><code>✅ "intricate filigree details, fine texture, sharp focus, highly detailed"
-✅ "individual hair strands, skin pores visible, micro details"</code></pre>
+        <pre><code>�?"intricate filigree details, fine texture, sharp focus, highly detailed"
+�?"individual hair strands, skin pores visible, micro details"</code></pre>
 
         <h3>2. Specify Material Qualities</h3>
-        <pre><code>✅ "brushed metal surface, visible grain, reflective highlights"
-✅ "hand-woven fabric, individual thread visible, natural texture"</code></pre>
+        <pre><code>�?"brushed metal surface, visible grain, reflective highlights"
+�?"hand-woven fabric, individual thread visible, natural texture"</code></pre>
 
         <h3>3. Use Higher Stylize Values</h3>
         <p>HD mode pairs beautifully with higher stylize values (300-750), giving the model more room to add artistic detail to the increased resolution.</p>
@@ -134,11 +134,11 @@
 
     <nav class="article-nav">
         <a href="getting-started-midjourney-v8.html">
-            <span class="nav-label">← Previous</span>
+            <span class="nav-label">�?Previous</span>
             <span class="nav-title">Getting Started Guide</span>
         </a>
         <a href="midjourney-v8-prompt-techniques.html" style="text-align:right;">
-            <span class="nav-label">Next Article →</span>
+            <span class="nav-label">Next Article �?/span>
             <span class="nav-title">Advanced Prompt Techniques</span>
         </a>
     </nav>

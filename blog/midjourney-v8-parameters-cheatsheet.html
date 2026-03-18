@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,7 +20,7 @@
 <body>
     <nav class="navbar scrolled" id="navbar">
         <div class="container nav-container">
-            <a href="../index.html" class="nav-logo"><span class="logo-icon">◆</span><span class="logo-text">MJ<span class="logo-highlight">V8</span></span></a>
+            <a href="../index.html" class="nav-logo"><img src="../images/logo.png" alt="MJV8" class="logo-img"><span class="logo-text">MJ<span class="logo-highlight">V8</span></span></a>
             <div class="nav-links" id="nav-links">
                 <a href="../index.html#features" class="nav-link">Features</a>
                 <a href="../index.html#prompt-generator" class="nav-link">Prompt Generator</a>
@@ -66,7 +66,7 @@
 --ar 3:2     Classic landscape photo</code></pre>
 
         <h2>🎨 Stylize (--stylize or --s)</h2>
-        <p>Controls how much Midjourney applies its own artistic style. Range: 0–1000.</p>
+        <p>Controls how much Midjourney applies its own artistic style. Range: 0�?000.</p>
         <pre><code>--stylize 0      Minimal artistic interpretation
 --stylize 50     Subtle styling
 --stylize 100    Default balance
@@ -77,7 +77,7 @@
         <p><strong>Recommendation:</strong> Start at default (100), increase for artistic shots, decrease for literal prompt matching.</p>
 
         <h2>🎲 Chaos (--chaos or --c)</h2>
-        <p>Controls how much variation between the 4 generated images. Range: 0–100.</p>
+        <p>Controls how much variation between the 4 generated images. Range: 0�?00.</p>
         <pre><code>--chaos 0     Very similar outputs (default)
 --chaos 25    Slight variations
 --chaos 50    Moderate differences
@@ -100,26 +100,26 @@
 --v 6.1   Midjourney V6.1</code></pre>
 
         <h2>🌱 Seed (--seed)</h2>
-        <p>Uses a specific seed for reproducible results. Range: 0–4294967295.</p>
+        <p>Uses a specific seed for reproducible results. Range: 0�?294967295.</p>
         <pre><code>--seed 12345</code></pre>
         <p><strong>Usage:</strong> Great for comparing prompt changes with consistent composition. Same seed + same prompt = same image.</p>
 
         <h2>⏹️ Stop (--stop)</h2>
-        <p>Stops generation partway through for a less-finished look. Range: 10–100.</p>
+        <p>Stops generation partway through for a less-finished look. Range: 10�?00.</p>
         <pre><code>--stop 50     Stop at 50% completion
 --stop 80     Stop at 80% (slightly rough)
 --stop 100    Full generation (default)</code></pre>
         <p><strong>Usage:</strong> Lower values create more abstract, painterly results.</p>
 
         <h2>🔮 Weird (--weird or --w)</h2>
-        <p>Introduces unconventional, experimental qualities. Range: 0–3000.</p>
+        <p>Introduces unconventional, experimental qualities. Range: 0�?000.</p>
         <pre><code>--weird 250     Slightly unusual
 --weird 1000    Notably strange
 --weird 3000    Maximum weirdness</code></pre>
         <p><strong>Usage:</strong> Perfect for surreal, avant-garde, or dreamlike imagery.</p>
 
         <h2>🔁 Repeat (--repeat or --r)</h2>
-        <p>Runs the same prompt multiple times. Range: 2–40 (Standard), 2–10 (Basic).</p>
+        <p>Runs the same prompt multiple times. Range: 2�?0 (Standard), 2�?0 (Basic).</p>
         <pre><code>--repeat 4    Generate 4 batches (16 images total)</code></pre>
 
         <h2>🧮 Quality (--quality or --q)</h2>
@@ -130,35 +130,18 @@
 --quality 2       Higher quality (2x GPU)</code></pre>
 
         <h2>📝 Quick Reference Card</h2>
-        <pre><code>┌─────────────────────────────────────────────────┐
-│          MIDJOURNEY V8 QUICK REFERENCE          │
-├─────────────────────────────────────────────────┤
-│ --v 8              Use V8 model                 │
-│ --hd               Native 2K resolution  🆕     │
-│ --ar W:H           Aspect ratio                 │
-│ --stylize 0-1000   Artistic level (default 100) │
-│ --chaos 0-100      Variation level (default 0)  │
-│ --weird 0-3000     Experimental level           │
-│ --no [items]       Exclude elements             │
-│ --seed [number]    Reproducibility              │
-│ --stop 10-100      Partial generation           │
-│ --quality 0.25-2   Quality/speed tradeoff       │
-│ --repeat 2-40      Batch generation             │
-├─────────────────────────────────────────────────┤
-│ MULTI-PROMPT: concept1:: concept2::             │
-│ WEIGHTS:      concept1::2 concept2::0.5         │
-└─────────────────────────────────────────────────┘</code></pre>
+        <pre><code>┌─────────────────────────────────────────────────�?�?         MIDJOURNEY V8 QUICK REFERENCE          �?├─────────────────────────────────────────────────�?�?--v 8              Use V8 model                 �?�?--hd               Native 2K resolution  🆕     �?�?--ar W:H           Aspect ratio                 �?�?--stylize 0-1000   Artistic level (default 100) �?�?--chaos 0-100      Variation level (default 0)  �?�?--weird 0-3000     Experimental level           �?�?--no [items]       Exclude elements             �?�?--seed [number]    Reproducibility              �?�?--stop 10-100      Partial generation           �?�?--quality 0.25-2   Quality/speed tradeoff       �?�?--repeat 2-40      Batch generation             �?├─────────────────────────────────────────────────�?�?MULTI-PROMPT: concept1:: concept2::             �?�?WEIGHTS:      concept1::2 concept2::0.5         �?└─────────────────────────────────────────────────�?/code></pre>
 
-        <p>Need help building prompts? Use our <a href="../index.html#prompt-generator" style="color: var(--primary-light);">Visual Prompt Generator</a> — it handles parameters automatically! 🚀</p>
+        <p>Need help building prompts? Use our <a href="../index.html#prompt-generator" style="color: var(--primary-light);">Visual Prompt Generator</a> �?it handles parameters automatically! 🚀</p>
     </article>
 
     <nav class="article-nav">
         <a href="midjourney-v8-prompt-techniques.html">
-            <span class="nav-label">← Previous</span>
+            <span class="nav-label">�?Previous</span>
             <span class="nav-title">Advanced Prompt Techniques</span>
         </a>
         <a href="best-ai-image-generators-2026.html" style="text-align:right;">
-            <span class="nav-label">Next Article →</span>
+            <span class="nav-label">Next Article �?/span>
             <span class="nav-title">Best AI Generators 2026</span>
         </a>
     </nav>
