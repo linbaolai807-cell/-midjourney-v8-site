@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://midjourney-v8.com/sitemap.xml

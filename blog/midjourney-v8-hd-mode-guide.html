@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midjourney V8 HD Mode Guide: Native 2K Resolution Images (2048×2048)</title>
+    <meta name="description" content="Master Midjourney V8's new --hd mode for stunning native 2048×2048 resolution images. Learn when to use HD mode, best practices, and optimization tips.">
+    <meta name="keywords" content="midjourney v8 hd mode, midjourney v8 2k resolution, midjourney v8 high resolution, midjourney --hd, midjourney 2048">
+    <link rel="canonical" href="https://midjourney-v8.com/blog/midjourney-v8-hd-mode-guide.html">
+    <meta property="og:title" content="V8 HD Mode: Creating Native 2K Images">
+    <meta property="og:description" content="Master Midjourney V8's --hd mode for native 2048×2048 resolution without upscaling.">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Article","headline":"Midjourney V8 HD Mode Guide: Native 2K Resolution Images","datePublished":"2026-03-18","author":{"@type":"Organization","name":"Midjourney V8 Guide"}}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-logo"><span class="logo-icon">◆</span><span class="logo-text">MJ<span class="logo-highlight">V8</span></span></a>
+            <div class="nav-links" id="nav-links">
+                <a href="../index.html#features" class="nav-link">Features</a>
+                <a href="../index.html#prompt-generator" class="nav-link">Prompt Generator</a>
+                <a href="../blog.html" class="nav-link">Blog</a>
+            </div>
+            <div class="nav-actions">
+                <a href="../index.html#prompt-generator" class="btn btn-primary btn-sm">Try Generator</a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="article-header">
+        <div class="container">
+            <span class="article-tag">🖼️ Deep Dive</span>
+            <h1>V8 HD Mode: Creating Native 2K Images (2048×2048)</h1>
+            <div class="article-meta">
+                <span>📖 8 min read</span>
+                <span>Published: March 18, 2026</span>
+            </div>
+        </div>
+    </header>
+
+    <article class="article-body">
+        <p>One of the most exciting features of <strong>Midjourney V8</strong> is the brand-new <code>--hd</code> mode, which enables native 2048×2048 resolution rendering. Unlike previous versions where you had to rely on upscaling to get high-resolution images (often introducing artifacts), V8's HD mode generates every pixel from scratch at full resolution.</p>
+
+        <h2>What is HD Mode?</h2>
+        <p>HD mode is a new parameter introduced in V8 that tells the model to render at its maximum native resolution of 2048×2048 pixels. This means:</p>
+        <ul>
+            <li><strong>No upscaling artifacts</strong> — every detail is generated natively</li>
+            <li><strong>Sharper textures</strong> — fabric, skin, architecture all have incredible detail</li>
+            <li><strong>Better small details</strong> — text, eyes, hands, and intricate patterns are rendered more accurately</li>
+            <li><strong>Print-ready quality</strong> — output is suitable for printing at reasonable sizes</li>
+        </ul>
+
+        <h2>How to Use HD Mode</h2>
+        <p>Simply add <code>--hd</code> to the end of your prompt:</p>
+        <pre><code>/imagine a macro photograph of a dewdrop on a rose petal, morning light, photorealistic --v 8 --hd</code></pre>
+
+        <p>You can combine <code>--hd</code> with any other parameter:</p>
+        <pre><code>/imagine epic fantasy battle scene, dragons and knights, oil painting style --v 8 --hd --ar 21:9 --stylize 500</code></pre>
+
+        <h2>When to Use HD Mode</h2>
+        <h3>Best Use Cases for --hd</h3>
+        <ul>
+            <li><strong>Detailed portraits</strong> — skin texture, hair strands, eye detail</li>
+            <li><strong>Architecture and interiors</strong> — intricate building details, material textures</li>
+            <li><strong>Nature and macro</strong> — individual leaves, water droplets, insect wings</li>
+            <li><strong>Product visualization</strong> — sharp product renders for commercial use</li>
+            <li><strong>Print projects</strong> — posters, art prints, book covers</li>
+        </ul>
+
+        <h3>When to Skip --hd</h3>
+        <ul>
+            <li><strong>Quick exploration</strong> — when you're still iterating on prompt ideas</li>
+            <li><strong>Social media posts</strong> — standard resolution is plenty for Instagram/Twitter</li>
+            <li><strong>Batch generation</strong> — to conserve GPU hours during bulk creation</li>
+        </ul>
+
+        <div class="tip-box">
+            <p><strong>💡 Cost Note:</strong> HD mode uses approximately 2x the GPU time of a standard generation. On a Standard plan, this means each HD generation counts as ~2 regular generations. Plan accordingly!</p>
+        </div>
+
+        <h2>HD Mode vs Upscaling: What's the Difference?</h2>
+        <p>In previous Midjourney versions, you'd generate at 1024×1024 and then upscale. Here's the critical difference:</p>
+
+        <ul>
+            <li><strong>Upscaling (old)</strong>: Takes a lower-resolution image and uses AI to "fill in" details. This can create artifacts, blurry areas, or hallucinated textures.</li>
+            <li><strong>HD Mode (V8)</strong>: Generates the entire image at 2048×2048 from scratch. Every pixel is intentional. No guesswork, no artifacts.</li>
+        </ul>
+
+        <p>The difference is especially noticeable in:</p>
+        <ul>
+            <li>Fine text and typography</li>
+            <li>Complex repeating patterns (fabrics, tiles)</li>
+            <li>Hair and fur textures</li>
+            <li>Distant background details</li>
+        </ul>
+
+        <h2>Optimizing Your Prompts for HD Mode</h2>
+        <p>Since HD mode provides more resolution to work with, your prompts should take advantage of it:</p>
+
+        <h3>1. Add Detail-Oriented Descriptors</h3>
+        <pre><code>✅ "intricate filigree details, fine texture, sharp focus, highly detailed"
+✅ "individual hair strands, skin pores visible, micro details"</code></pre>
+
+        <h3>2. Specify Material Qualities</h3>
+        <pre><code>✅ "brushed metal surface, visible grain, reflective highlights"
+✅ "hand-woven fabric, individual thread visible, natural texture"</code></pre>
+
+        <h3>3. Use Higher Stylize Values</h3>
+        <p>HD mode pairs beautifully with higher stylize values (300-750), giving the model more room to add artistic detail to the increased resolution.</p>
+
+        <h2>Example HD Mode Prompts</h2>
+
+        <h3>Portrait Photography</h3>
+        <pre><code>/imagine close-up portrait of an elderly Japanese fisherman, weathered skin, deep wrinkles, kind eyes, natural sunlight, documentary photography, Canon EOS R5 85mm f/1.4 --v 8 --hd --ar 3:4</code></pre>
+
+        <h3>Architecture</h3>
+        <pre><code>/imagine interior of a grand Art Deco hotel lobby, marble floors, geometric patterns, gold leaf details, dramatic chandelier, warm ambient lighting --v 8 --hd --ar 16:9</code></pre>
+
+        <h3>Fantasy Art</h3>
+        <pre><code>/imagine ancient tree of life in an enchanted forest, glowing runes carved into bark, bioluminescent mushrooms, fireflies, moonlight filtering through canopy, digital art --v 8 --hd --stylize 500</code></pre>
+
+        <h2>Conclusion</h2>
+        <p>V8's HD mode is a game-changer for anyone who needs high-quality, detailed AI-generated images. By understanding when and how to use it effectively, you can create stunning visuals that rival professional photography and illustration.</p>
+
+        <p>Ready to try it? Head to our <a href="../index.html#prompt-generator" style="color: var(--primary-light);">Prompt Generator</a> and check the "HD Mode" option to start creating native 2K masterpieces!</p>
+    </article>
+
+    <nav class="article-nav">
+        <a href="getting-started-midjourney-v8.html">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Getting Started Guide</span>
+        </a>
+        <a href="midjourney-v8-prompt-techniques.html" style="text-align:right;">
+            <span class="nav-label">Next Article →</span>
+            <span class="nav-title">Advanced Prompt Techniques</span>
+        </a>
+    </nav>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 midjourney-v8.com. Not affiliated with Midjourney Inc.</p>
+                <div class="footer-bottom-links">
+                    <a href="../privacy.html">Privacy</a>
+                    <a href="../terms.html">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>

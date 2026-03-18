@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midjourney V8 Guide - Tutorials, Prompt Generator & Tips | midjourney-v8.com</title>
+    <meta name="description" content="Master Midjourney V8 with our comprehensive guides, free prompt generator tool, and expert tutorials. Explore native 2K HD mode, new features, and pro tips.">
+    <meta name="keywords" content="midjourney v8, midjourney v8 tutorial, midjourney v8 prompt generator, midjourney v8 guide, midjourney v8 new features, AI image generator">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://midjourney-v8.com/">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Midjourney V8 Guide - Tutorials, Prompt Generator & Tips">
+    <meta property="og:description" content="Master Midjourney V8 with comprehensive guides, free prompt generator, and expert tutorials.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://midjourney-v8.com/">
+    <meta property="og:image" content="https://midjourney-v8.com/assets/og-image.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Midjourney V8 Guide - Tutorials, Prompt Generator & Tips">
+    <meta name="twitter:description" content="Master Midjourney V8 with comprehensive guides, free prompt generator, and expert tutorials.">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Midjourney V8 Guide",
+        "url": "https://midjourney-v8.com/",
+        "description": "Comprehensive Midjourney V8 tutorials, prompt generator, and tips",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://midjourney-v8.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-icon">◆</span>
+                <span class="logo-text">MJ<span class="logo-highlight">V8</span></span>
+            </a>
+            <div class="nav-links" id="nav-links">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#prompt-generator" class="nav-link">Prompt Generator</a>
+                <a href="#tutorials" class="nav-link">Tutorials</a>
+                <a href="#comparison" class="nav-link">V7 vs V8</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+            </div>
+            <div class="nav-actions">
+                <a href="#prompt-generator" class="btn btn-primary btn-sm">Try Generator</a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-grid"></div>
+            <div class="hero-orb hero-orb-1"></div>
+            <div class="hero-orb hero-orb-2"></div>
+            <div class="hero-orb hero-orb-3"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span>Alpha Released March 17, 2026</span>
+            </div>
+            <h1 class="hero-title">
+                Master <span class="gradient-text">Midjourney V8</span>
+                <br>The Future of AI Art
+            </h1>
+            <p class="hero-subtitle">
+                Native 2K resolution, unprecedented prompt understanding, and stunning aesthetic quality. 
+                Your complete guide to the most powerful AI image generator ever created.
+            </p>
+            <div class="hero-cta">
+                <a href="#prompt-generator" class="btn btn-primary btn-lg">
+                    <span class="btn-icon">⚡</span>
+                    Free Prompt Generator
+                </a>
+                <a href="#tutorials" class="btn btn-outline btn-lg">
+                    <span class="btn-icon">📚</span>
+                    Read Tutorials
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-value">2048×2048</span>
+                    <span class="stat-label">Native Resolution</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">--hd</span>
+                    <span class="stat-label">New HD Mode</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">10x</span>
+                    <span class="stat-label">Better Coherence</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What's New</span>
+                <h2 class="section-title">V8 Key Features</h2>
+                <p class="section-subtitle">Everything you need to know about the biggest upgrade in Midjourney history</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card feature-card-large">
+                    <div class="feature-icon">🖼️</div>
+                    <h3>Native 2K HD Resolution</h3>
+                    <p>The new <code>--hd</code> mode renders images at 2048×2048 natively. No more upscaling artifacts or blurry details. Every pixel is generated from scratch.</p>
+                    <div class="feature-tag">Game Changer</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>Superior Prompt Understanding</h3>
+                    <p>V8 follows complex, multi-layered prompts with unprecedented accuracy. Describe exactly what you want, and V8 delivers.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Enhanced Aesthetics</h3>
+                    <p>Better understanding of your aesthetic preferences. V8 learns your style and produces images that match your creative vision.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔗</div>
+                    <h3>Image Coherence</h3>
+                    <p>Dramatically improved spatial coherence. Characters, objects, and scenes maintain consistent proportions and relationships.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Web Interface</h3>
+                    <p>V8 Alpha is available directly on alpha.midjourney.com. Create stunning art right in your browser — no Discord required.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎭</div>
+                    <h3>Style Personalization</h3>
+                    <p>Advanced style transfer and personalization. V8 understands style references better than any previous version.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prompt Generator Section -->
+    <section class="prompt-generator" id="prompt-generator">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Free Tool</span>
+                <h2 class="section-title">V8 Prompt Generator</h2>
+                <p class="section-subtitle">Build perfect Midjourney V8 prompts with our visual builder. Select style, subject, and parameters — copy and paste into Midjourney.</p>
+            </div>
+            
+            <div class="generator-wrapper">
+                <div class="generator-panel">
+                    <!-- Subject -->
+                    <div class="gen-section">
+                        <label class="gen-label">📷 Subject</label>
+                        <input type="text" class="gen-input" id="gen-subject" placeholder="e.g., a futuristic city at sunset, a portrait of a warrior princess...">
+                    </div>
+
+                    <!-- Style -->
+                    <div class="gen-section">
+                        <label class="gen-label">🎨 Art Style</label>
+                        <div class="gen-chips" id="gen-style">
+                            <button class="chip" data-value="photorealistic">📸 Photorealistic</button>
+                            <button class="chip" data-value="digital art">🖌️ Digital Art</button>
+                            <button class="chip" data-value="oil painting">🎨 Oil Painting</button>
+                            <button class="chip" data-value="watercolor">💧 Watercolor</button>
+                            <button class="chip" data-value="anime">🌸 Anime</button>
+                            <button class="chip" data-value="3D render">🔮 3D Render</button>
+                            <button class="chip" data-value="cyberpunk">🌆 Cyberpunk</button>
+                            <button class="chip" data-value="fantasy art">🐉 Fantasy</button>
+                            <button class="chip" data-value="minimalist">◽ Minimalist</button>
+                            <button class="chip" data-value="pixel art">👾 Pixel Art</button>
+                            <button class="chip" data-value="studio ghibli style">🏯 Ghibli</button>
+                            <button class="chip" data-value="cinematic">🎬 Cinematic</button>
+                        </div>
+                    </div>
+
+                    <!-- Lighting -->
+                    <div class="gen-section">
+                        <label class="gen-label">💡 Lighting</label>
+                        <div class="gen-chips" id="gen-lighting">
+                            <button class="chip" data-value="golden hour lighting">🌅 Golden Hour</button>
+                            <button class="chip" data-value="dramatic lighting">🔦 Dramatic</button>
+                            <button class="chip" data-value="soft diffused light">☁️ Soft Light</button>
+                            <button class="chip" data-value="neon lighting">💜 Neon</button>
+                            <button class="chip" data-value="studio lighting">📷 Studio</button>
+                            <button class="chip" data-value="natural sunlight">☀️ Natural</button>
+                            <button class="chip" data-value="backlit silhouette">🌄 Backlit</button>
+                            <button class="chip" data-value="volumetric fog">🌫️ Volumetric</button>
+                        </div>
+                    </div>
+
+                    <!-- Camera / Composition -->
+                    <div class="gen-section">
+                        <label class="gen-label">📐 Composition</label>
+                        <div class="gen-chips" id="gen-composition">
+                            <button class="chip" data-value="close-up shot">🔍 Close-up</button>
+                            <button class="chip" data-value="wide angle shot">🌍 Wide Angle</button>
+                            <button class="chip" data-value="bird's eye view">🦅 Bird's Eye</button>
+                            <button class="chip" data-value="low angle shot">⬆️ Low Angle</button>
+                            <button class="chip" data-value="portrait shot">👤 Portrait</button>
+                            <button class="chip" data-value="macro photography">🔬 Macro</button>
+                        </div>
+                    </div>
+
+                    <!-- V8 Parameters -->
+                    <div class="gen-section">
+                        <label class="gen-label">⚙️ V8 Parameters</label>
+                        <div class="gen-params">
+                            <div class="param-group">
+                                <label class="param-label">Aspect Ratio</label>
+                                <select class="param-select" id="param-ar">
+                                    <option value="">Default (1:1)</option>
+                                    <option value="--ar 16:9">16:9 Landscape</option>
+                                    <option value="--ar 9:16">9:16 Portrait</option>
+                                    <option value="--ar 4:3">4:3 Standard</option>
+                                    <option value="--ar 3:4">3:4 Portrait</option>
+                                    <option value="--ar 21:9">21:9 Ultra Wide</option>
+                                    <option value="--ar 2:3">2:3 Poster</option>
+                                </select>
+                            </div>
+                            <div class="param-group">
+                                <label class="param-label">Stylize <span id="stylize-val">100</span></label>
+                                <input type="range" class="param-range" id="param-stylize" min="0" max="1000" value="100" step="10">
+                            </div>
+                            <div class="param-group">
+                                <label class="param-label">Chaos <span id="chaos-val">0</span></label>
+                                <input type="range" class="param-range" id="param-chaos" min="0" max="100" value="0" step="5">
+                            </div>
+                            <div class="param-group param-toggles">
+                                <label class="toggle-label">
+                                    <input type="checkbox" id="param-hd"> <span class="toggle-text">--hd (2K Resolution)</span>
+                                </label>
+                                <label class="toggle-label">
+                                    <input type="checkbox" id="param-v8" checked> <span class="toggle-text">--v 8</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Extra Details -->
+                    <div class="gen-section">
+                        <label class="gen-label">✨ Extra Details (optional)</label>
+                        <input type="text" class="gen-input" id="gen-extra" placeholder="e.g., highly detailed, 8k, sharp focus, vibrant colors...">
+                    </div>
+                </div>
+
+                <!-- Output -->
+                <div class="generator-output">
+                    <div class="output-header">
+                        <h3>Generated Prompt</h3>
+                        <div class="output-actions">
+                            <button class="btn btn-sm btn-outline" id="btn-random" title="Random Prompt">🎲 Random</button>
+                            <button class="btn btn-sm btn-primary" id="btn-copy" title="Copy to Clipboard">📋 Copy</button>
+                        </div>
+                    </div>
+                    <div class="output-box" id="output-box">
+                        <p class="output-placeholder">Start building your prompt above...</p>
+                    </div>
+                    <div class="output-tip">
+                        <span>💡</span> Paste this prompt directly into Midjourney's <code>/imagine</code> command
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="comparison" id="comparison">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Side by Side</span>
+                <h2 class="section-title">V7 vs V8 Comparison</h2>
+                <p class="section-subtitle">See the dramatic improvements V8 brings over its predecessor</p>
+            </div>
+            <div class="comparison-grid">
+                <div class="comparison-card">
+                    <div class="comparison-header">
+                        <span class="comparison-label comparison-old">V7</span>
+                        <span class="comparison-vs">VS</span>
+                        <span class="comparison-label comparison-new">V8</span>
+                    </div>
+                    <div class="comparison-item">
+                        <div class="comp-row">
+                            <span class="comp-feature">Max Native Resolution</span>
+                            <span class="comp-v7">1024×1024</span>
+                            <span class="comp-v8">2048×2048 🆕</span>
+                        </div>
+                        <div class="comp-row">
+                            <span class="comp-feature">Complex Prompt Adherence</span>
+                            <span class="comp-v7">Good</span>
+                            <span class="comp-v8">Excellent 🔥</span>
+                        </div>
+                        <div class="comp-row">
+                            <span class="comp-feature">Image Coherence</span>
+                            <span class="comp-v7">Good</span>
+                            <span class="comp-v8">Superior 🔥</span>
+                        </div>
+                        <div class="comp-row">
+                            <span class="comp-feature">Style Understanding</span>
+                            <span class="comp-v7">Moderate</span>
+                            <span class="comp-v8">Advanced 🔥</span>
+                        </div>
+                        <div class="comp-row">
+                            <span class="comp-feature">Aesthetic Personalization</span>
+                            <span class="comp-v7">Basic</span>
+                            <span class="comp-v8">Deep Learning 🔥</span>
+                        </div>
+                        <div class="comp-row">
+                            <span class="comp-feature">Web Access</span>
+                            <span class="comp-v7">Discord Only</span>
+                            <span class="comp-v8">Web + Discord ✅</span>
+                        </div>
+                        <div class="comp-row">
+                            <span class="comp-feature">HD Mode</span>
+                            <span class="comp-v7">Not Available</span>
+                            <span class="comp-v8">--hd Flag 🆕</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tutorials Section -->
+    <section class="tutorials" id="tutorials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Learn</span>
+                <h2 class="section-title">V8 Tutorials & Guides</h2>
+                <p class="section-subtitle">From beginner basics to advanced techniques — master Midjourney V8</p>
+            </div>
+            <div class="tutorials-grid">
+                <a href="blog/getting-started-midjourney-v8.html" class="tutorial-card tutorial-featured">
+                    <div class="tutorial-badge">🆕 Beginner Guide</div>
+                    <div class="tutorial-content">
+                        <h3>Getting Started with Midjourney V8: Complete Beginner's Guide</h3>
+                        <p>Everything you need to know to start creating stunning AI art with Midjourney V8. Step-by-step setup, first prompt, and essential tips.</p>
+                        <div class="tutorial-meta">
+                            <span>📖 12 min read</span>
+                            <span>Mar 18, 2026</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="blog/midjourney-v8-hd-mode-guide.html" class="tutorial-card">
+                    <div class="tutorial-badge">🖼️ Deep Dive</div>
+                    <div class="tutorial-content">
+                        <h3>V8 HD Mode: Creating Native 2K Images</h3>
+                        <p>Master the new --hd parameter for stunning 2048×2048 resolution images without upscaling artifacts.</p>
+                        <div class="tutorial-meta">
+                            <span>📖 8 min read</span>
+                            <span>Mar 18, 2026</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="blog/midjourney-v8-prompt-techniques.html" class="tutorial-card">
+                    <div class="tutorial-badge">💡 Advanced</div>
+                    <div class="tutorial-content">
+                        <h3>10 Advanced Prompt Techniques for V8</h3>
+                        <p>Professional prompt engineering strategies to unlock V8's full potential. Multi-prompts, weights, and style blending.</p>
+                        <div class="tutorial-meta">
+                            <span>📖 10 min read</span>
+                            <span>Mar 18, 2026</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="blog/midjourney-v7-vs-v8-comparison.html" class="tutorial-card">
+                    <div class="tutorial-badge">🆚 Comparison</div>
+                    <div class="tutorial-content">
+                        <h3>Midjourney V7 vs V8: 20 Side-by-Side Comparisons</h3>
+                        <p>Real-world prompt comparisons showing exactly how V8 improves over V7 across portraits, landscapes, and more.</p>
+                        <div class="tutorial-meta">
+                            <span>📖 15 min read</span>
+                            <span>Mar 18, 2026</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="blog/midjourney-v8-parameters-cheatsheet.html" class="tutorial-card">
+                    <div class="tutorial-badge">📋 Reference</div>
+                    <div class="tutorial-content">
+                        <h3>V8 Parameters Cheat Sheet</h3>
+                        <p>Complete reference for all V8 parameters: --ar, --hd, --stylize, --chaos, --weird, --no, and more.</p>
+                        <div class="tutorial-meta">
+                            <span>📖 5 min read</span>
+                            <span>Mar 18, 2026</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="tutorials-cta">
+                <a href="blog.html" class="btn btn-outline btn-lg">View All Tutorials →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-box">
+                <div class="cta-bg">
+                    <div class="cta-orb cta-orb-1"></div>
+                    <div class="cta-orb cta-orb-2"></div>
+                </div>
+                <h2>Ready to Create with V8?</h2>
+                <p>Start with our free Prompt Generator or dive into the tutorials to master Midjourney V8.</p>
+                <div class="cta-buttons">
+                    <a href="#prompt-generator" class="btn btn-primary btn-lg">⚡ Open Prompt Generator</a>
+                    <a href="https://alpha.midjourney.com" target="_blank" rel="noopener" class="btn btn-outline btn-lg">🌐 Visit Midjourney V8</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="nav-logo">
+                        <span class="logo-icon">◆</span>
+                        <span class="logo-text">MJ<span class="logo-highlight">V8</span></span>
+                    </a>
+                    <p>Your comprehensive guide to Midjourney V8. Tutorials, tools, and tips for AI art creators.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <a href="#prompt-generator">Prompt Generator</a>
+                    <a href="blog.html">Tutorials</a>
+                    <a href="#comparison">V7 vs V8</a>
+                    <a href="#features">V8 Features</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Guides</h4>
+                    <a href="blog/getting-started-midjourney-v8.html">Getting Started</a>
+                    <a href="blog/midjourney-v8-hd-mode-guide.html">HD Mode Guide</a>
+                    <a href="blog/midjourney-v8-prompt-techniques.html">Prompt Techniques</a>
+                    <a href="blog/midjourney-v8-parameters-cheatsheet.html">Parameters Cheat Sheet</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Official Links</h4>
+                    <a href="https://midjourney.com" target="_blank" rel="noopener">Midjourney Official</a>
+                    <a href="https://alpha.midjourney.com" target="_blank" rel="noopener">Midjourney V8 Alpha</a>
+                    <a href="https://docs.midjourney.com" target="_blank" rel="noopener">Official Docs</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 midjourney-v8.com. This site is not affiliated with Midjourney Inc.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy.html">Privacy</a>
+                    <a href="terms.html">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
