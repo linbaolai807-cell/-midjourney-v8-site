@@ -556,6 +556,19 @@ code {
 .feature-icon {
     font-size: 2rem;
     margin-bottom: 16px;
+    color: var(--primary-light);
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(124, 58, 237, 0.1);
+    border-radius: 14px;
+    border: 1px solid rgba(124, 58, 237, 0.15);
+}
+
+.feature-icon svg {
+    flex-shrink: 0;
 }
 
 .feature-card h3 {
