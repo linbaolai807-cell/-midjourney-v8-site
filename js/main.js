@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Close mobile menu on link click
-        navLinks.querySelectorAll('.nav-link').forEach(link => {
+        navLinks.querySelectorAll('.nav-link, .nav-cta-mobile').forEach(link => {
             link.addEventListener('click', () => {
                 mobileToggle.classList.remove('active');
                 navLinks.classList.remove('active');
@@ -319,4 +319,66 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+
+    // =========================================
+    // Performance Optimizations
+    // =========================================
+    
+    // Native lazy loading fallback with IntersectionObserver
+    if ('IntersectionObserver' in window) {
+        const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+        const imageObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    if (img.dataset.src) {
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                    }
+                    imageObserver.unobserve(img);
+                }
+            });
+        }, {
+            rootMargin: '50px 0px', // 提前50px开始加载
+            threshold: 0.01
+        });
+        
+        lazyImages.forEach(img => imageObserver.observe(img));
+    }
+
+    // =========================================
+    // Scroll Animations (lightweight)
+    // =========================================
+    const animateOnScroll = () => {
+        const elements = document.querySelectorAll('.feature-card, .tutorial-card, .blog-card, .comp-table-wrapper');
+        
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            elements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+        }
+    };
+    
+    // Only run scroll animations if user hasn't disabled motion
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        animateOnScroll();
+    }
+
 });
