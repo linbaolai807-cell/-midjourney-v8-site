@@ -1,635 +1,95 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Midjourney V8 Guide - Tutorials, Prompt Generator & Tips | midjourney-v8.com</title>
-    <meta name="description" content="Master Midjourney V8 with our comprehensive guides, free prompt generator tool, and expert tutorials. Explore native 2K HD mode, new features, and pro tips.">
-    <meta name="keywords" content="midjourney v8, midjourney v8 tutorial, midjourney v8 prompt generator, midjourney v8 guide, midjourney v8 new features, AI image generator">
-    <meta name="robots" content="index, follow">
-    <link rel="icon" type="image/png" href="images/logo.png">
-    <link rel="apple-touch-icon" href="images/logo.png">
-    <link rel="canonical" href="https://midjourney-v8.com/">
-    <link rel="alternate" hreflang="en" href="https://midjourney-v8.com/" />
-    <link rel="alternate" hreflang="id" href="https://midjourney-v8.com/id/" />
-    <link rel="alternate" hreflang="x-default" href="https://midjourney-v8.com/" />
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Midjourney V8 Guide - Tutorials, Prompt Generator & Tips">
-    <meta property="og:description" content="Master Midjourney V8 with comprehensive guides, free prompt generator, and expert tutorials.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://midjourney-v8.com/">
-    <meta property="og:image" content="https://midjourney-v8.com/assets/og-image.jpg">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Midjourney V8 Guide - Tutorials, Prompt Generator & Tips">
-    <meta name="twitter:description" content="Master Midjourney V8 with comprehensive guides, free prompt generator, and expert tutorials.">
-    
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Midjourney V8 Guide",
-        "url": "https://midjourney-v8.com/",
-        "description": "Comprehensive Midjourney V8 tutorials, prompt generator, and tips",
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://midjourney-v8.com/search?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-        }
-    }
-    </script>
-    
-    <!-- Performance: Preload critical resources -->
-    <link rel="preload" href="images/logo.png" as="image">
-    <link rel="preload" href="css/style.css" as="style">
-    <link rel="preload" href="js/main.js" as="script">
-    <link rel="dns-prefetch" href="https://www.clarity.ms">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
-    
-    <link rel="stylesheet" href="css/style.css">
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "vxs1tgdqes");
-</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Midjourney V8 to V8.2 Prompt Upgrader & Parameter Checker</title>
+  <meta name="description" content="Check and upgrade an older Midjourney V8 prompt for V8.2. See every incompatible parameter, why it changed, and a clean prompt you can copy.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://midjourney-v8.com/">
+  <link rel="alternate" hreflang="en" href="https://midjourney-v8.com/">
+  <link rel="alternate" hreflang="id" href="https://midjourney-v8.com/id/">
+  <link rel="alternate" hreflang="x-default" href="https://midjourney-v8.com/">
+  <meta property="og:title" content="Midjourney V8 to V8.2 Prompt Upgrader">
+  <meta property="og:description" content="Find incompatible parameters, understand every change, and copy a repaired V8.2 prompt.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://midjourney-v8.com/">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23080a0f'/%3E%3Cpath d='M14 18h36v7H14zm0 14h23v7H14zm0 14h31v7H14z' fill='%23a3ff12'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tool.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Midjourney V8 to V8.2 Prompt Upgrader","applicationCategory":"DesignApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"A browser-based Midjourney V8.2 prompt compatibility checker with explainable fixes."}
+  </script>
+  <script>
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","vxs1tgdqes");
+  </script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="container nav-container">
-            <a href="/" class="nav-logo">
-                <img src="images/logo.png" alt="MJV8 Logo" class="logo-img" width="32" height="32" fetchpriority="high">
-                <span class="logo-text">MJ<span class="logo-highlight">V8</span></span>
-            </a>
-            <div class="nav-links" id="nav-links">
-                <a href="#features" class="nav-link">Features</a>
-                <a href="#prompt-generator" class="nav-link">Prompt Generator</a>
-                <a href="#tutorials" class="nav-link">Tutorials</a>
-                <a href="#comparison" class="nav-link">V7 vs V8</a>
-                <a href="/blog" class="nav-link">Blog</a>
-                <a href="#prompt-generator" class="btn btn-primary btn-lg nav-cta-mobile">�?Try Generator</a>
-            </div>
-            <div class="nav-actions">
-                <a href="#prompt-generator" class="btn btn-primary btn-sm">Try Generator</a>
-                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
-        </div>
-    </nav>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Model Prompt Lab home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>MODEL PROMPT LAB</span></a>
+    <nav aria-label="Main navigation"><a href="#tool">Prompt tool</a><a href="#how-it-works">How it works</a><a href="/blog">Legacy guides</a></nav>
+    <a class="header-cta" href="#early-access">Early access</a>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="hero-bg">
-            <div class="hero-gradient"></div>
-            <div class="hero-grid"></div>
-            <div class="hero-orb hero-orb-1"></div>
-            <div class="hero-orb hero-orb-2"></div>
-            <div class="hero-orb hero-orb-3"></div>
+  <main>
+    <section class="tool-hero" id="tool">
+      <div class="intro">
+        <p class="eyebrow">Free compatibility checker · Updated for V8.2</p>
+        <h1>Upgrade a V8 prompt.<br><span>See every fix.</span></h1>
+        <p class="lede">Paste an older Midjourney prompt. The checker separates its text and parameters, repairs V8.2 incompatibilities, and explains every change before you copy it.</p>
+        <div class="trust-row"><span>No sign-up</span><span>Runs in your browser</span><span>Your prompt stays on your device</span></div>
+      </div>
+
+      <div class="workspace" aria-label="Midjourney V8.2 prompt checker">
+        <div class="workspace-topline"><span class="step-label">01 / INPUT</span><button class="text-button" id="sample-button" type="button">Load example</button></div>
+        <label class="input-label" for="source-prompt">Midjourney prompt</label>
+        <textarea id="source-prompt" rows="6" aria-describedby="prompt-help prompt-error" placeholder="Example: editorial portrait::2 --v 8 --q 2 --ar 4:5"></textarea>
+        <p class="input-help" id="prompt-help">Your prompt is processed only in this browser. Press Ctrl/⌘ + Enter to run the check.</p>
+        <p class="input-error" id="prompt-error" role="alert" hidden>Paste a prompt before running the check.</p>
+        <div class="controls">
+          <label>Aspect ratio<select id="aspect-ratio"><option value="">Keep original</option><option value="1:1">1:1 Square</option><option value="4:5">4:5 Portrait</option><option value="16:9">16:9 Landscape</option><option value="9:16">9:16 Vertical</option><option value="3:2">3:2 Photo</option></select></label>
+          <label>Resolution<select id="resolution"><option value="">Keep original</option><option value="hd">HD · 2048px</option><option value="sd">SD · 1024px</option></select></label>
+          <button class="primary-button" id="translate-button" type="button">Check & upgrade to V8.2 <span aria-hidden="true">→</span></button>
         </div>
-        <div class="container hero-content">
-            <div class="hero-badge">
-                <span class="badge-dot"></span>
-                <span>Alpha Released March 17, 2026</span>
-            </div>
-            <h1 class="hero-title">
-                Master <span class="gradient-text">Midjourney V8</span>
-                <br>The Future of AI Art
-            </h1>
-            <p class="hero-subtitle">
-                Native 2K resolution, unprecedented prompt understanding, and stunning aesthetic quality. 
-                Your complete guide to the most powerful AI image generator ever created.
-            </p>
-            <div class="hero-cta">
-                <a href="#prompt-generator" class="btn btn-primary btn-lg">
-                    <span class="btn-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
-                    Free Prompt Generator
-                </a>
-                <a href="#tutorials" class="btn btn-outline btn-lg">
-                    <span class="btn-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span>
-                    Read Tutorials
-                </a>
-            </div>
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-value">2048×2048</span>
-                    <span class="stat-label">Native Resolution</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat">
-                    <span class="stat-value">--hd</span>
-                    <span class="stat-label">New HD Mode</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat">
-                    <span class="stat-value">10x</span>
-                    <span class="stat-label">Better Coherence</span>
-                </div>
-            </div>
+        <div class="result-panel" id="result-panel" hidden>
+          <div class="result-head"><div><span class="step-label">02 / RESULT</span><h2 id="result-title">V8.2 prompt ready</h2></div><span class="result-status" id="result-status"></span></div>
+          <section class="output-card" aria-labelledby="clean-prompt-title">
+            <div class="output-card-head"><h3 id="clean-prompt-title">Clean V8.2 prompt</h3><button class="copy-button" id="copy-button" type="button">Copy result</button></div>
+            <output id="prompt-output"></output>
+          </section>
+          <section class="diff-section" aria-labelledby="comparison-title">
+            <div class="subsection-head"><h3 id="comparison-title">Before and after</h3><span id="change-count"></span></div>
+            <div class="diff-grid"><div><span class="diff-label removed">Original</span><pre id="original-output"></pre></div><div><span class="diff-label added">Repaired</span><pre id="repaired-output"></pre></div></div>
+          </section>
+          <section class="analysis-section" aria-labelledby="analysis-title"><div class="subsection-head"><h3 id="analysis-title">Compatibility report</h3><span>Based on official V8.2 documentation</span></div><div class="checks" id="checks" aria-live="polite"></div></section>
+          <section class="parsed-section" aria-labelledby="parsed-title"><div class="subsection-head"><h3 id="parsed-title">What the checker found</h3><span>Text, references and parameters</span></div><div class="parsed-groups" id="parsed-groups"></div></section>
+          <section class="secondary-export" aria-labelledby="export-title"><div><h3 id="export-title">Need another model?</h3><p>Convert the cleaned creative intent after reviewing the V8.2 result.</p></div><div class="export-actions"><button type="button" data-convert="flux">Export for FLUX</button><button type="button" data-convert="ideogram">Export for Ideogram</button></div><div class="converted-result" id="converted-result" hidden><div><strong id="converted-title"></strong><button class="copy-button" id="copy-converted" type="button">Copy</button></div><output id="converted-output"></output></div></section>
         </div>
+      </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">What's New</span>
-                <h2 class="section-title">V8 Key Features</h2>
-                <p class="section-subtitle">Everything you need to know about the biggest upgrade in Midjourney history</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card feature-card-large">
-                    <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M7 8h2v8H7z"/><path d="M15 8h2v8h-2z"/><path d="M9 12h6"/></svg></div>
-                    <h3>Native 2K HD Resolution</h3>
-                    <p>The new <code>--hd</code> mode renders images at 2048×2048 natively. No more upscaling artifacts or blurry details. Every pixel is generated from scratch.</p>
-                    <div class="feature-tag">Game Changer</div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 0 1 5 5c0 1.5-.7 2.8-1.8 3.7L12 13l-3.2-2.3A5 5 0 0 1 12 2z"/><path d="M12 13v9"/><path d="M9 18h6"/><circle cx="12" cy="7" r="1.5"/><path d="M7.5 7a4.5 4.5 0 0 1 9 0"/><path d="M5.5 11a6.5 6.5 0 0 1 13 0"/></svg></div>
-                    <h3>Superior Prompt Understanding</h3>
-                    <p>V8 follows complex, multi-layered prompts with unprecedented accuracy. Describe exactly what you want, and V8 delivers.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="2"/><circle cx="17.5" cy="10.5" r="2"/><circle cx="8.5" cy="7.5" r="2"/><circle cx="6.5" cy="12.5" r="2"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.9 0 1.7-.8 1.7-1.7 0-.4-.2-.8-.4-1.1-.3-.3-.4-.7-.4-1.1 0-.9.8-1.7 1.7-1.7H16c3.3 0 6-2.7 6-6 0-5.5-4.5-9.6-10-9.4z"/></svg></div>
-                    <h3>Enhanced Aesthetics</h3>
-                    <p>Better understanding of your aesthetic preferences. V8 learns your style and produces images that match your creative vision.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.8 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.8-1.7"/></svg></div>
-                    <h3>Image Coherence</h3>
-                    <p>Dramatically improved spatial coherence. Characters, objects, and scenes maintain consistent proportions and relationships.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-                    <h3>Web Interface</h3>
-                    <p>V8 Alpha is available directly on alpha.midjourney.com. Create stunning art right in your browser �?no Discord required.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76z"/><path d="M9 12h6"/><path d="M12 9v6"/></svg></div>
-                    <h3>Style Personalization</h3>
-                    <p>Advanced style transfer and personalization. V8 understands style references better than any previous version.</p>
-                </div>
-            </div>
-        </div>
+    <section class="model-strip" aria-label="Tool capabilities"><p>ONE FOCUSED CHECKER</p><div><span>PARSE <b>STRUCTURE</b></span><span>REPAIR <b>V8.2</b></span><span>EXPLAIN <b>EVERY CHANGE</b></span></div></section>
+    <section class="explanation" id="how-it-works">
+      <div class="section-heading"><p class="eyebrow">Why this tool exists</p><h2>A repaired prompt should never be a black box.</h2></div>
+      <div class="reason-grid">
+        <article><span>01</span><h3>Parse before changing</h3><p>Separates the description, image references, parameters and unknown syntax instead of using a blind text replacement.</p></article>
+        <article><span>02</span><h3>Repair with evidence</h3><p>Explains what changed, why it changed, and links each compatibility decision to the relevant official documentation.</p></article>
+        <article><span>03</span><h3>Keep you in control</h3><p>Shows the original and repaired prompts together. Unknown parameters are preserved and marked for review rather than silently deleted.</p></article>
+      </div>
+      <p class="source-note">V8.2 compatibility rules are based on the current official Midjourney version chart. Model behavior changes; always review a generated prompt before production use. <a href="https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version" target="_blank" rel="noopener">Read the official version notes ↗</a></p>
     </section>
 
-    <!-- Inspiration Showcase Section -->
-    <style>
-        .showcase { padding: 5rem 0; background-color: var(--bg-alt, #0f172a); }
-        .showcase-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem; }
-        .showcase-card { background: var(--bg-card, #1e293b); border: 1px solid var(--border-color, #334155); border-radius: 16px; overflow: hidden; transition: transform 0.3s ease; display: flex; flex-direction: column; }
-        .showcase-card:hover { transform: translateY(-5px); border-color: var(--primary-light, #8b5cf6); }
-        .showcase-content { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
-        .showcase-content h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-light, #f8fafc); }
-        .showcase-desc { font-size: 0.9rem; color: var(--text-muted, #94a3b8); margin-bottom: 1.5rem; flex: 1; }
-        .prompt-box { background: var(--bg-dark, #0f172a); padding: 1rem; border-radius: 8px; border: 1px solid var(--border-color, #334155); position: relative; }
-        .prompt-text { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--text-main, #cbd5e1); margin-bottom: 1rem; word-break: break-all; }
-        .copy-prompt-btn { width: 100%; border-color: var(--primary-color, #6d28d9); color: var(--primary-light, #8b5cf6); }
-        .copy-prompt-btn:hover { background: var(--primary-color, #6d28d9); color: white; }
-    </style>
-    <section class="showcase" id="showcase">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Inspiration</span>
-                <h2 class="section-title">Popular V8 Prompts</h2>
-                <p class="section-subtitle">Copy these tested prompts to start generating professional assets instantly.</p>
-            </div>
-            <div class="showcase-grid">
-                <!-- E-commerce -->
-                <div class="showcase-card">
-                    <div class="showcase-img-wrapper">
-                        <img src="images/showcase/perfume.png" alt="E-commerce Product Photo generated by Midjourney V8" loading="lazy" style="width: 100%; height: 200px; object-fit: cover;">
-                    </div>
-                    <div class="showcase-content">
-                        <h3>🛍�?E-commerce Product</h3>
-                        <p class="showcase-desc">High-end product photography for shop listings.</p>
-                        <div class="prompt-box">
-                            <p class="prompt-text" id="prompt-1">Commercial photography of a luxury perfume bottle resting on a clear water ripple surface, studio lighting, macro photography, 8k, photorealistic --v 8 --hd</p>
-                            <button class="btn btn-sm btn-outline copy-prompt-btn" onclick="navigator.clipboard.writeText(document.getElementById('prompt-1').innerText); this.innerText='�?Copied!'; setTimeout(() => this.innerText='📋 Copy Prompt', 2000);">📋 Copy Prompt</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- UX/UI -->
-                <div class="showcase-card">
-                    <div class="showcase-img-wrapper">
-                        <img src="images/showcase/ui.png" alt="Modern minimal dashboard UI interface concept" loading="lazy" style="width: 100%; height: 200px; object-fit: cover; object-position: top;">
-                    </div>
-                    <div class="showcase-content">
-                        <h3>💻 UI/UX Assets</h3>
-                        <p class="showcase-desc">Modern glassmorphism elements for web design.</p>
-                        <div class="prompt-box">
-                            <p class="prompt-text" id="prompt-2">A modern minimal dashboard UI interface concept, glassmorphism, flat design, dribbble style, vibrant colors, futuristic --v 8 --ar 16:9</p>
-                            <button class="btn btn-sm btn-outline copy-prompt-btn" onclick="navigator.clipboard.writeText(document.getElementById('prompt-2').innerText); this.innerText='�?Copied!'; setTimeout(() => this.innerText='📋 Copy Prompt', 2000);">📋 Copy Prompt</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Social Media -->
-                <div class="showcase-card">
-                    <div class="showcase-img-wrapper">
-                        <img src="images/showcase/portrait.png" alt="Hyper-realistic cinematic portrait of a fashion model" loading="lazy" style="width: 100%; height: 200px; object-fit: cover;">
-                    </div>
-                    <div class="showcase-content">
-                        <h3>📸 Social Media Portraits</h3>
-                        <p class="showcase-desc">Hyper-realistic influencers and models.</p>
-                        <div class="prompt-box">
-                            <p class="prompt-text" id="prompt-3">A hyper-realistic cinematic portrait of a beautiful fashion model, street fashion, shot on 35mm lens, Kodak Portra 400, cinematic lighting --v 8 --ar 4:5</p>
-                            <button class="btn btn-sm btn-outline copy-prompt-btn" onclick="navigator.clipboard.writeText(document.getElementById('prompt-3').innerText); this.innerText='�?Copied!'; setTimeout(() => this.innerText='📋 Copy Prompt', 2000);">📋 Copy Prompt</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Anime -->
-                <div class="showcase-card">
-                    <div class="showcase-img-wrapper">
-                        <img src="images/showcase/mascot.png" alt="Cute cybernetic cat mascot popmart blind box toy" loading="lazy" style="width: 100%; height: 200px; object-fit: cover;">
-                    </div>
-                    <div class="showcase-content">
-                        <h3>🎨 Anime / Mascots</h3>
-                        <p class="showcase-desc">Pop-mart style blind box designs.</p>
-                        <div class="prompt-box">
-                            <p class="prompt-text" id="prompt-4">A cute cybernetic cat mascot, popmart blind box toy style, chibi anime, 3d render, octane render, pastel colors, clean background --v 8 --ar 1:1</p>
-                            <button class="btn btn-sm btn-outline copy-prompt-btn" onclick="navigator.clipboard.writeText(document.getElementById('prompt-4').innerText); this.innerText='�?Copied!'; setTimeout(() => this.innerText='📋 Copy Prompt', 2000);">📋 Copy Prompt</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section class="early-access" id="early-access">
+      <div><p class="eyebrow">Paid validation, not another subscription</p><h2>Save a brand style once. Export every format.</h2><p>The next version will add reusable brand profiles, batch aspect ratios, prompt history, and clean CSV export.</p></div>
+      <div class="offer"><p><strong>$12</strong> one-time early access</p><button id="interest-button" type="button">I want early access</button><small id="interest-status">No payment or contact details are collected. This records an interest event and saves the status on this device.</small></div>
     </section>
+  </main>
 
-    <!-- Prompt Generator Section -->
-    <section class="prompt-generator" id="prompt-generator">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Free Tool</span>
-                <h2 class="section-title">V8 Prompt Generator</h2>
-                <p class="section-subtitle">Build perfect Midjourney V8 prompts with our visual builder. Select style, subject, and parameters �?copy and paste into Midjourney.</p>
-            </div>
-            
-            <div class="generator-wrapper">
-                <div class="generator-panel">
-                    <!-- Subject -->
-                    <div class="gen-section">
-                        <label class="gen-label">📷 Subject</label>
-                        <input type="text" class="gen-input" id="gen-subject" placeholder="e.g., a futuristic city at sunset, a portrait of a warrior princess...">
-                    </div>
-
-                    <!-- Style -->
-                    <div class="gen-section">
-                        <label class="gen-label">🎨 Art Style</label>
-                        <div class="gen-chips" id="gen-style">
-                            <button class="chip" data-value="photorealistic">📸 Photorealistic</button>
-                            <button class="chip" data-value="digital art">🖌️Digital Art</button>
-                            <button class="chip" data-value="oil painting">🎨 Oil Painting</button>
-                            <button class="chip" data-value="watercolor">💧 Watercolor</button>
-                            <button class="chip" data-value="anime">🌸 Anime</button>
-                            <button class="chip" data-value="3D render">🔮 3D Render</button>
-                            <button class="chip" data-value="cyberpunk">🌆 Cyberpunk</button>
-                            <button class="chip" data-value="fantasy art">🐉 Fantasy</button>
-                            <button class="chip" data-value="minimalist">�?Minimalist</button>
-                            <button class="chip" data-value="pixel art">👾 Pixel Art</button>
-                            <button class="chip" data-value="studio ghibli style">🏯 Ghibli</button>
-                            <button class="chip" data-value="cinematic">🎬 Cinematic</button>
-                        </div>
-                    </div>
-
-                    <!-- Lighting -->
-                    <div class="gen-section">
-                        <label class="gen-label">💡 Lighting</label>
-                        <div class="gen-chips" id="gen-lighting">
-                            <button class="chip" data-value="golden hour lighting">🌅 Golden Hour</button>
-                            <button class="chip" data-value="dramatic lighting">🔦 Dramatic</button>
-                            <button class="chip" data-value="soft diffused light">☁️ Soft Light</button>
-                            <button class="chip" data-value="neon lighting">💜 Neon</button>
-                            <button class="chip" data-value="studio lighting">📷 Studio</button>
-                            <button class="chip" data-value="natural sunlight">☀️Natural</button>
-                            <button class="chip" data-value="backlit silhouette">🌄 Backlit</button>
-                            <button class="chip" data-value="volumetric fog">🌫️Volumetric</button>
-                        </div>
-                    </div>
-
-                    <!-- Camera / Composition -->
-                    <div class="gen-section">
-                        <label class="gen-label">📐 Composition</label>
-                        <div class="gen-chips" id="gen-composition">
-                            <button class="chip" data-value="close-up shot">🔍 Close-up</button>
-                            <button class="chip" data-value="wide angle shot">🌍 Wide Angle</button>
-                            <button class="chip" data-value="bird's eye view">🦅 Bird's Eye</button>
-                            <button class="chip" data-value="low angle shot">⬆️ Low Angle</button>
-                            <button class="chip" data-value="portrait shot">👤 Portrait</button>
-                            <button class="chip" data-value="macro photography">🔬 Macro</button>
-                        </div>
-                    </div>
-
-                    <!-- V8 Parameters -->
-                    <div class="gen-section">
-                        <label class="gen-label">⚙️ V8 Parameters</label>
-                        <div class="gen-params">
-                            <div class="param-group">
-                                <label class="param-label">Aspect Ratio</label>
-                                <select class="param-select" id="param-ar">
-                                    <option value="">Default (1:1)</option>
-                                    <option value="--ar 16:9">16:9 Landscape</option>
-                                    <option value="--ar 9:16">9:16 Portrait</option>
-                                    <option value="--ar 4:3">4:3 Standard</option>
-                                    <option value="--ar 3:4">3:4 Portrait</option>
-                                    <option value="--ar 21:9">21:9 Ultra Wide</option>
-                                    <option value="--ar 2:3">2:3 Poster</option>
-                                </select>
-                            </div>
-                            <div class="param-group">
-                                <label class="param-label">Stylize <span id="stylize-val">100</span></label>
-                                <input type="range" class="param-range" id="param-stylize" min="0" max="1000" value="100" step="10">
-                            </div>
-                            <div class="param-group">
-                                <label class="param-label">Chaos <span id="chaos-val">0</span></label>
-                                <input type="range" class="param-range" id="param-chaos" min="0" max="100" value="0" step="5">
-                            </div>
-                            <div class="param-group param-toggles">
-                                <label class="toggle-label">
-                                    <input type="checkbox" id="param-hd"> <span class="toggle-text">--hd (2K Resolution)</span>
-                                </label>
-                                <label class="toggle-label">
-                                    <input type="checkbox" id="param-v8" checked> <span class="toggle-text">--v 8</span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Extra Details -->
-                    <div class="gen-section">
-                        <label class="gen-label">�?Extra Details (optional)</label>
-                        <input type="text" class="gen-input" id="gen-extra" placeholder="e.g., highly detailed, 8k, sharp focus, vibrant colors...">
-                    </div>
-                </div>
-
-                <!-- Output -->
-                <div class="generator-output">
-                    <div class="output-header">
-                        <h3>Generated Prompt</h3>
-                        <div class="output-actions">
-                            <button class="btn btn-sm btn-outline" id="btn-random" title="Random Prompt">🎲 Random</button>
-                            <button class="btn btn-sm btn-primary" id="btn-copy" title="Copy to Clipboard">📋 Copy</button>
-                        </div>
-                    </div>
-                    <div class="output-box" id="output-box">
-                        <p class="output-placeholder">Start building your prompt above...</p>
-                    </div>
-                    <div class="output-tip">
-                        <span>💡</span> Paste this prompt directly into Midjourney's <code>/imagine</code> command
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Comparison Section -->
-    <section class="comparison" id="comparison">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Side by Side</span>
-                <h2 class="section-title">V7 vs V8 Comparison</h2>
-                <p class="section-subtitle">See the dramatic improvements V8 brings over its predecessor</p>
-            </div>
-            <div class="comparison-grid">
-                <div class="comparison-card">
-                    <div class="comparison-header">
-                        <span class="comparison-label comparison-old">V7</span>
-                        <span class="comparison-vs">VS</span>
-                        <span class="comparison-label comparison-new">V8</span>
-                    </div>
-                    <div class="comparison-item">
-                        <div class="comp-row">
-                            <span class="comp-feature">Max Native Resolution</span>
-                            <span class="comp-v7">1024×1024</span>
-                            <span class="comp-v8">2048×2048 🆕</span>
-                        </div>
-                        <div class="comp-row">
-                            <span class="comp-feature">Complex Prompt Adherence</span>
-                            <span class="comp-v7">Good</span>
-                            <span class="comp-v8">Excellent 🔥</span>
-                        </div>
-                        <div class="comp-row">
-                            <span class="comp-feature">Image Coherence</span>
-                            <span class="comp-v7">Good</span>
-                            <span class="comp-v8">Superior 🔥</span>
-                        </div>
-                        <div class="comp-row">
-                            <span class="comp-feature">Style Understanding</span>
-                            <span class="comp-v7">Moderate</span>
-                            <span class="comp-v8">Advanced 🔥</span>
-                        </div>
-                        <div class="comp-row">
-                            <span class="comp-feature">Aesthetic Personalization</span>
-                            <span class="comp-v7">Basic</span>
-                            <span class="comp-v8">Deep Learning 🔥</span>
-                        </div>
-                        <div class="comp-row">
-                            <span class="comp-feature">Web Access</span>
-                            <span class="comp-v7">Discord Only</span>
-                            <span class="comp-v8">Web + Discord �?/span>
-                        </div>
-                        <div class="comp-row">
-                            <span class="comp-feature">HD Mode</span>
-                            <span class="comp-v7">Not Available</span>
-                            <span class="comp-v8">--hd Flag 🆕</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tutorials Section -->
-    <section class="tutorials" id="tutorials">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Learn</span>
-                <h2 class="section-title">V8 Tutorials & Guides</h2>
-                <p class="section-subtitle">From beginner basics to advanced techniques �?master Midjourney V8</p>
-            </div>
-            <div class="tutorials-grid">
-                <a href="/blog/getting-started-midjourney-v8" class="tutorial-card tutorial-featured">
-                    <div class="tutorial-badge">🆕 Beginner Guide</div>
-                    <div class="tutorial-content">
-                        <h3>Getting Started with Midjourney V8: Complete Beginner's Guide</h3>
-                        <p>Everything you need to know to start creating stunning AI art with Midjourney V8. Step-by-step setup, first prompt, and essential tips.</p>
-                        <div class="tutorial-meta">
-                            <span>📖 12 min read</span>
-                            <span>Mar 18, 2026</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="/blog/midjourney-v8-hd-mode-guide" class="tutorial-card">
-                    <div class="tutorial-badge">🖼️Deep Dive</div>
-                    <div class="tutorial-content">
-                        <h3>V8 HD Mode: Creating Native 2K Images</h3>
-                        <p>Master the new --hd parameter for stunning 2048×2048 resolution images without upscaling artifacts.</p>
-                        <div class="tutorial-meta">
-                            <span>📖 8 min read</span>
-                            <span>Mar 18, 2026</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="/blog/midjourney-v8-prompt-techniques" class="tutorial-card">
-                    <div class="tutorial-badge">💡 Advanced</div>
-                    <div class="tutorial-content">
-                        <h3>10 Advanced Prompt Techniques for V8</h3>
-                        <p>Professional prompt engineering strategies to unlock V8's full potential. Multi-prompts, weights, and style blending.</p>
-                        <div class="tutorial-meta">
-                            <span>📖 10 min read</span>
-                            <span>Mar 18, 2026</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="/blog/midjourney-v7-vs-v8-comparison" class="tutorial-card">
-                    <div class="tutorial-badge">🆚 Comparison</div>
-                    <div class="tutorial-content">
-                        <h3>Midjourney V7 vs V8: 20 Side-by-Side Comparisons</h3>
-                        <p>Real-world prompt comparisons showing exactly how V8 improves over V7 across portraits, landscapes, and more.</p>
-                        <div class="tutorial-meta">
-                            <span>📖 15 min read</span>
-                            <span>Mar 18, 2026</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="/blog/midjourney-v8-parameters-cheatsheet" class="tutorial-card">
-                    <div class="tutorial-badge">📋 Reference</div>
-                    <div class="tutorial-content">
-                        <h3>V8 Parameters Cheat Sheet</h3>
-                        <p>Complete reference for all V8 parameters: --ar, --hd, --stylize, --chaos, --weird, --no, and more.</p>
-                        <div class="tutorial-meta">
-                            <span>📖 5 min read</span>
-                            <span>Mar 18, 2026</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="tutorials-cta">
-                <a href="/blog" class="btn btn-outline btn-lg">View All Tutorials <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Blog Promotion Banner -->
-    <section class="blog-promo">
-        <div class="container">
-            <div class="blog-promo-header">
-                <div>
-                    <span class="section-tag">Blog</span>
-                    <h2 class="section-title" style="margin-top:12px;font-size:1.8rem;">Latest Articles</h2>
-                </div>
-                <a href="/blog" class="btn btn-outline btn-sm">View All �?/a>
-            </div>
-            <div class="blog-promo-grid">
-                <a href="/blog/best-midjourney-v8-prompts" class="blog-promo-card">
-                    <img src="images/blog/best-prompts.png" alt="Best Prompts" loading="lazy" width="300" height="169">
-                    <div class="blog-promo-info">
-                        <span class="blog-promo-tag">🔥 Popular</span>
-                        <h3>50 Best Midjourney V8 Prompts</h3>
-                        <p>Curated collection of stunning prompts across all categories.</p>
-                    </div>
-                </a>
-                <a href="/blog/midjourney-v8-web-interface-guide" class="blog-promo-card">
-                    <img src="images/blog/web-interface.png" alt="Web Interface" loading="lazy" width="300" height="169">
-                    <div class="blog-promo-info">
-                        <span class="blog-promo-tag">🆕 New</span>
-                        <h3>V8 Web Interface Guide</h3>
-                        <p>Master the new alpha.midjourney.com web experience.</p>
-                    </div>
-                </a>
-                <a href="/blog/midjourney-v8-pricing-plans" class="blog-promo-card">
-                    <img src="images/blog/pricing.png" alt="Pricing Plans" loading="lazy" width="300" height="169">
-                    <div class="blog-promo-info">
-                        <span class="blog-promo-tag">💰 Guide</span>
-                        <h3>V8 Pricing Plans Explained</h3>
-                        <p>Compare all plans and find the best value for your needs.</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-box">
-                <div class="cta-bg">
-                    <div class="cta-orb cta-orb-1"></div>
-                    <div class="cta-orb cta-orb-2"></div>
-                </div>
-                <h2>Ready to Create with V8?</h2>
-                <p>Start with our free Prompt Generator or dive into the tutorials to master Midjourney V8.</p>
-                <div class="cta-buttons">
-                    <a href="#prompt-generator" class="btn btn-primary btn-lg">�?Open Prompt Generator</a>
-                    <a href="https://alpha.midjourney.com" target="_blank" rel="noopener" class="btn btn-outline btn-lg">🌐 Visit Midjourney V8</a>
-                </div>
-            </div>
-        </div>
-    </section>    <!-- Adsterra: In-page ad slot -->
-    <section class="adsterra-wrap" aria-label="Advertisement">
-        <div class="container">
-            <div class="adsterra-slot" data-adsterra-slot="site-banner-1">
-                <!-- Adsterra code START (slot) -->
-<script async="async" data-cfasync="false" src="https://pl29193144.profitablecpmratenetwork.com/97f875144008350b04052dfeddb8f43a/invoke.js"></script>
-<div id="container-97f875144008350b04052dfeddb8f43a"></div>
-<!-- Adsterra code END (slot) -->
-            </div>
-        </div>
-    </section>
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="/" class="nav-logo">
-                        <img src="images/logo.png" alt="MJV8 Logo" class="logo-img" width="32" height="32">
-                        <span class="logo-text">MJ<span class="logo-highlight">V8</span></span>
-                    </a>
-                    <p>Your comprehensive guide to Midjourney V8. Tutorials, tools, and tips for AI art creators.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Resources</h4>
-                    <a href="#prompt-generator">Prompt Generator</a>
-                    <a href="/blog">Tutorials</a>
-                    <a href="#comparison">V7 vs V8</a>
-                    <a href="#features">V8 Features</a>
-                </div>
-                <div class="footer-links">
-                    <h4>Guides</h4>
-                    <a href="/blog/getting-started-midjourney-v8">Getting Started</a>
-                    <a href="/blog/midjourney-v8-hd-mode-guide">HD Mode Guide</a>
-                    <a href="/blog/midjourney-v8-prompt-techniques">Prompt Techniques</a>
-                    <a href="/blog/midjourney-v8-parameters-cheatsheet">Parameters Cheat Sheet</a>
-                </div>
-                <div class="footer-links">
-                    <h4>Official Links</h4>
-                    <a href="https://midjourney.com" target="_blank" rel="noopener">Midjourney Official</a>
-                    <a href="https://alpha.midjourney.com" target="_blank" rel="noopener">Midjourney V8 Alpha</a>
-                    <a href="https://docs.midjourney.com" target="_blank" rel="noopener">Official Docs</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 midjourney-v8.com. This site is not affiliated with Midjourney Inc.</p>
-                <div class="footer-bottom-links">
-                    <a href="/privacy">Privacy</a>
-                    <a href="/terms">Terms</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="js/main.js" defer></script>
-    <script src="https://pl29193143.profitablecpmratenetwork.com/2a/15/0b/2a150bda8957f8997cd3d5baeaac64e1.js"></script>
+  <footer><div><strong>MODEL PROMPT LAB</strong><p>An independent, model-neutral prompt utility.</p></div><div><p>Midjourney™ is a trademark of Midjourney, Inc. This site is not endorsed by or affiliated with Midjourney, Inc.</p><a href="/blog">Legacy articles</a></div></footer>
+  <script src="js/prompt-engine.js" defer></script>
+  <script src="js/tool.js" defer></script>
 </body>
 </html>
-

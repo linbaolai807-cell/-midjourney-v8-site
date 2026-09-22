@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "targetVersion": "8.2",
+  "updatedAt": "2026-09-22",
+  "sources": {
+    "version": "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version",
+    "parameters": "https://docs.midjourney.com/hc/en-us/articles/32859204029709-Parameter-List",
+    "multiprompt": "https://docs.midjourney.com/hc/en-us/articles/32658968492557-Multi-Prompts-Weights",
+    "omni": "https://docs.midjourney.com/hc/en-us/articles/36285124473997-Omni-Reference",
+    "edit": "https://docs.midjourney.com/hc/en-us/articles/48495453462797-Edit-Model"
+  },
+  "parameters": [
+    {"canonical":"version","aliases":["v","version"],"valueType":"one","action":"normalize-version"},
+    {"canonical":"aspect","aliases":["ar","aspect"],"valueType":"one","action":"validate-aspect"},
+    {"canonical":"hd","aliases":["hd"],"valueType":"flag","action":"resolution"},
+    {"canonical":"sd","aliases":["sd"],"valueType":"flag","action":"resolution"},
+    {"canonical":"quality","aliases":["q","quality"],"valueType":"one","action":"remove","source":"version"},
+    {"canonical":"omni-reference","aliases":["oref"],"valueType":"one","action":"migrate-edit","source":"omni"},
+    {"canonical":"omni-weight","aliases":["ow"],"valueType":"one","action":"remove-reference-weight","source":"omni"},
+    {"canonical":"character-reference","aliases":["cref"],"valueType":"one","action":"migrate-edit","source":"version"},
+    {"canonical":"character-weight","aliases":["cw"],"valueType":"one","action":"remove-reference-weight","source":"version"},
+    {"canonical":"chaos","aliases":["c","chaos"],"valueType":"one","action":"keep"},
+    {"canonical":"no","aliases":["no"],"valueType":"rest","action":"keep"},
+    {"canonical":"profile","aliases":["p","profile"],"valueType":"rest","action":"keep"},
+    {"canonical":"repeat","aliases":["r","repeat"],"valueType":"one","action":"keep"},
+    {"canonical":"seed","aliases":["seed"],"valueType":"one","action":"keep"},
+    {"canonical":"stop","aliases":["stop"],"valueType":"one","action":"keep"},
+    {"canonical":"stylize","aliases":["s","stylize"],"valueType":"one","action":"keep"},
+    {"canonical":"weird","aliases":["w","weird"],"valueType":"one","action":"keep"},
+    {"canonical":"tile","aliases":["tile"],"valueType":"flag","action":"keep"},
+    {"canonical":"turbo","aliases":["turbo"],"valueType":"flag","action":"keep"},
+    {"canonical":"relax","aliases":["relax"],"valueType":"flag","action":"keep"},
+    {"canonical":"fast","aliases":["fast"],"valueType":"flag","action":"keep"},
+    {"canonical":"raw","aliases":["raw"],"valueType":"flag","action":"keep"},
+    {"canonical":"sref","aliases":["sref"],"valueType":"rest","action":"keep"},
+    {"canonical":"sw","aliases":["sw"],"valueType":"one","action":"keep"},
+    {"canonical":"sv","aliases":["sv"],"valueType":"one","action":"keep"},
+    {"canonical":"iw","aliases":["iw"],"valueType":"one","action":"keep"},
+    {"canonical":"exp","aliases":["exp"],"valueType":"one","action":"keep"},
+    {"canonical":"edit","aliases":["edit"],"valueType":"rest","action":"keep"},
+    {"canonical":"draft","aliases":["draft"],"valueType":"flag","action":"keep"}
+  ]
+}
