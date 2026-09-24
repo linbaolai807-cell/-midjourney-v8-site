@@ -35,7 +35,7 @@
     footer.innerHTML = `
       <div class="footer-shell">
         <div><strong>MODEL PROMPT LAB</strong><p>An independent prompt compatibility utility and archive of practical Midjourney guides.</p></div>
-        <div><p>Midjourney™ is a trademark of Midjourney, Inc. This site is not endorsed by or affiliated with Midjourney, Inc.</p><a href="${root}index.html#tool">Prompt checker</a><a href="${root}blog.html">All guides</a></div>
+        <div><p>Midjourney™ is a trademark of Midjourney, Inc. This site is not endorsed by or affiliated with Midjourney, Inc.</p><a href="${root}index.html#tool">Prompt checker</a><a href="${root}blog.html">All guides</a><a href="${root}privacy.html">Privacy</a><a href="${root}terms.html">Terms</a></div>
       </div>`;
   }
 })();
